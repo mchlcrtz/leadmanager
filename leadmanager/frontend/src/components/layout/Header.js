@@ -1,15 +1,23 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { logout } from '../../actions/auth'
+import { logout } from "../../actions/auth";
 
 class Header extends Component {
   render() {
     const { isAuthenticated, user } = this.props.auth;
     const authLinks = (
       <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
+        <span className="navbar-text mr-3">
+          <strong>{user ? `Welcome ${user.username}` : ""}</strong>
+        </span>
         <li className="nav-item">
-          <button onClick={this.props.logout} className="nav-item-link btn btn-info btn-sm text-light">Logout</button>
+          <button
+            onClick={this.props.logout}
+            className="nav-item-link btn btn-info btn-sm text-light"
+          >
+            Logout
+          </button>
         </li>
       </ul>
     );
