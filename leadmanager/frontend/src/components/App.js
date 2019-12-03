@@ -6,12 +6,20 @@ import {
   Switch,
   Redirect
 } from "react-router-dom";
-import Header from "./layout/Header";
-import Dashboard from "./leads/Dashboard";
+
 import { Provider as AlertProvider } from "react-alert";
 import AlertTemplate from "react-alert-template-basic";
+
+import Header from './layout/Header.js'
+import Dashboard from './leads/Dashboard.js'
+import Alerts from './layout/Alerts.js'
+import Login from './accounts/Login.js'
+import Register from './accounts/Register.js'
+import PrivateRoute from './common/PrivateRoute.js'
+
 import { Provider } from "react-redux";
 import store from "../store";
+import { loadUser } from "../actions/auth"
 
 const alertOptions = {
   timeout: 3000,
@@ -19,8 +27,9 @@ const alertOptions = {
 };
 
 class App extends Component {
-  constructor(props) {
-    super(props);
+
+  componentDidMount() {
+    store.dispatch(loadUser())
   }
 
   render() {
@@ -32,7 +41,10 @@ class App extends Component {
               <Header />
               <div className="container">
                 <Switch>
-                  <Route exact path="/" component={Dashboard} />
+                  <PrivateRoute exact path="/" component={Dashboard} />
+                  <Route exact path="/register" component={Register} />
+                  <Route exact path="/login" component={Login} />
+
                 </Switch>
               </div>
             </Fragment>
