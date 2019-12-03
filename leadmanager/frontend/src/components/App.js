@@ -19,6 +19,7 @@ import PrivateRoute from './common/PrivateRoute.js'
 
 import { Provider } from "react-redux";
 import store from "../store";
+import { loadUser } from "../actions/auth"
 
 const alertOptions = {
   timeout: 3000,
@@ -26,8 +27,9 @@ const alertOptions = {
 };
 
 class App extends Component {
-  constructor(props) {
-    super(props);
+
+  componentDidMount() {
+    store.dispatch(loadUser())
   }
 
   render() {
