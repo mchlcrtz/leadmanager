@@ -1,4 +1,5 @@
 node_modules
+leadmanager/frontend/static
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
