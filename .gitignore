@@ -2,7 +2,9 @@ node_modules
 ./package-lock.json
 ./leadmanager/frontend/static
 package-lock.json
-leadmanager/frontend/static
+leadmanager/frontend
+.history/
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
