@@ -1,5 +1,14 @@
 node_modules
+<<<<<<< HEAD
+./package-lock.json
+./leadmanager/frontend/static
+package-lock.json
+leadmanager/frontend
+.history/
+
+=======
 leadmanager/frontend/static
+>>>>>>> master
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
