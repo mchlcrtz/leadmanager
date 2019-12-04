@@ -19,7 +19,7 @@ export default function(state = initialState, action) {
     case ADD_LEAD:
       return {
         ...state,
-        leads: [...state.leads, ...action.payload]
+        leads: [...state.leads, action.payload]
       };
     default:
       return state;

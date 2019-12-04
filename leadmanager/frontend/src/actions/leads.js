@@ -41,7 +41,7 @@ export const addLead = lead => (dispatch, getState) => {
         payload: res.data
       });
     })
-    .catch(err =>
+    .catch(err => {
       dispatch(returnErrors(err.response.data, err.response.status))
-    );
+    });
 };
