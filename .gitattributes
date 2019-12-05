@@ -1,4 +1,1 @@
-leadmanager/frontend/*
-leadmanager/frontend/
-
-leadmanager/frontend/ linguist-vendored
+leadmanager/frontend/* linguist-vendored
