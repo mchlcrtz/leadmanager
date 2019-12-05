@@ -1,4 +1,4 @@
 leadmanager/frontend/*
 leadmanager/frontend/
 
-leadmanager/frontend/*.js linguist-vendored=false
+leadmanager/frontend/ linguist-vendored
