@@ -26,7 +26,7 @@ const Login = function(props) {
               type="text"
               className="form-control"
               name="username"
-              onChange={setUsername}
+              onChange={(e) => setUsername(e.target.value)}
               value={username}
             />
           </div>
@@ -37,7 +37,7 @@ const Login = function(props) {
               type="password"
               className="form-control"
               name="password"
-              onChange={setPassword}
+              onChange={(e) => setPassword(e.target.value)}
               value={password}
             />
           </div>

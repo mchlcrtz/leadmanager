@@ -5,7 +5,7 @@ import { register } from "../../actions/auth";
 import { createMessage } from "../../actions/messages";
 
 const Register = function Register(props) {
-  
+
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -40,7 +40,7 @@ const Register = function Register(props) {
               type="text"
               className="form-control"
               name="username"
-              onChange={setUsername}
+              onChange={(e) => setUsername(e.target.value)}
               value={username}
             />
           </div>
@@ -50,7 +50,7 @@ const Register = function Register(props) {
               type="email"
               className="form-control"
               name="email"
-              onChange={setEmail}
+              onChange={(e) => setEmail(e.target.value)}
               value={email}
             />
           </div>
@@ -60,7 +60,7 @@ const Register = function Register(props) {
               type="password"
               className="form-control"
               name="password"
-              onChange={setPassword}
+              onChange={(e) => setPassword(e.target.value)}
               value={password}
             />
           </div>
@@ -70,7 +70,7 @@ const Register = function Register(props) {
               type="password"
               className="form-control"
               name="password2"
-              onChange={setPassword2}
+              onChange={(e) => setPassword2(e.target.value)}
               value={password2}
             />
           </div>
