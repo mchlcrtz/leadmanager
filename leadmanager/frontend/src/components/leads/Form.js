@@ -26,7 +26,7 @@ const Form = function Form(props) {
             className="form-control"
             type="text"
             name="name"
-            onChange={setName}
+            onChange={(e) => setName(e.target.value)}
             value={name}
           />
         </div>
@@ -36,7 +36,7 @@ const Form = function Form(props) {
             className="form-control"
             type="email"
             name="email"
-            onChange={setEmail}
+            onChange={(e) => setEmail(e.target.value)}
             value={email}
           />
         </div>
@@ -46,7 +46,7 @@ const Form = function Form(props) {
             className="form-control"
             type="text"
             name="message"
-            onChange={setMessage}
+            onChange={(e) => setMessage(e.target.value)}
             value={message}
           />
         </div>
