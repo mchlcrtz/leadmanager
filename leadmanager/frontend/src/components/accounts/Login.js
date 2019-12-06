@@ -9,7 +9,7 @@ const Login = function(props) {
 
   const onSubmit = e => {
     e.preventDefault();
-    this.props.login(username, password);
+    props.login(username, password);
   };
 
   if (props.isAuthenticated) {
